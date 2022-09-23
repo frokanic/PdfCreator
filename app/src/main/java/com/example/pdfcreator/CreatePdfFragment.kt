@@ -19,6 +19,8 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.PermissionChecker.checkSelfPermission
+
 import com.example.pdfcreator.databinding.FragmentCreatePdfBinding
 import com.itextpdf.text.Document
 import com.itextpdf.text.Paragraph
@@ -30,7 +32,7 @@ import java.util.*
 class CreatePdfFragment : Fragment(R.layout.fragment_create_pdf) {
 
     private lateinit var binding: FragmentCreatePdfBinding
-    private val STORAGE_PERMISSION_CODE: Int = 100
+    private val STORAGE_PERMISSION_CODE: Int = 1001
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
